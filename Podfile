@@ -6,6 +6,6 @@ target 'chyamadaKadai2' do
   use_frameworks!
 
   # Pods for chyamadaKadai2
-  pod 'SwiftLint'
+   pod 'SwiftLint'
 
 end
