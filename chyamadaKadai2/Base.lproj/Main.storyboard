@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,24 +13,24 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="chyamadaKadai2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="WJr-y7-bSA">
-                                <rect key="frame" x="75" y="30" width="644" height="125"/>
+                                <rect key="frame" x="75" y="74" width="224" height="125"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TjV-4v-vCl">
-                                        <rect key="frame" x="0.0" y="0.0" width="644" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="224" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iad-4j-6ot">
-                                        <rect key="frame" x="0.0" y="47" width="644" height="34"/>
+                                        <rect key="frame" x="0.0" y="47" width="224" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="api-gd-eOQ">
-                                        <rect key="frame" x="0.0" y="94" width="644" height="32"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="api-gd-eOQ">
+                                        <rect key="frame" x="0.0" y="93" width="224" height="32"/>
                                         <segments>
                                             <segment title="+"/>
                                             <segment title="-"/>
@@ -50,11 +50,11 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC3-UK-csA">
-                                <rect key="frame" x="374" y="170" width="46" height="30"/>
+                                <rect key="frame" x="164" y="214" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phx-ry-W0M">
-                                <rect key="frame" x="10" y="230" width="834" height="20.5"/>
+                                <rect key="frame" x="10" y="274" width="414" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,14 +71,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJr-y7-bSA" secondAttribute="trailing" priority="750" constant="115" id="Sxw-pd-Dvk"/>
                             <constraint firstItem="WJr-y7-bSA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-20" id="cj1-RB-i1o"/>
                             <constraint firstItem="uC3-UK-csA" firstAttribute="top" secondItem="WJr-y7-bSA" secondAttribute="bottom" constant="15" id="gx6-it-sUS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="WJr-y7-bSA" secondAttribute="trailing" priority="250" constant="300" id="m4p-z4-4f5"/>
                             <constraint firstItem="phx-ry-W0M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="wif-3C-YNK"/>
                             <constraint firstItem="WJr-y7-bSA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="75" id="y9M-eV-86Y"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Operator" destination="api-gd-eOQ" id="2c2-oY-7ub"/>
                         <outlet property="calculateButton" destination="uC3-UK-csA" id="Ige-Ln-14m"/>
                         <outlet property="firstField" destination="TjV-4v-vCl" id="Ia6-Jl-v2s"/>
+                        <outlet property="operatorSegment" destination="api-gd-eOQ" id="KaG-eb-Wty"/>
                         <outlet property="resultLabel" destination="phx-ry-W0M" id="b1o-Cu-7pV"/>
                         <outlet property="secondField" destination="Iad-4j-6ot" id="LKP-Ko-1ka"/>
                     </connections>
